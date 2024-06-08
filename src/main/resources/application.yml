@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/menudb
+    username: ohgiraffers
+    password: ohgiraffers
+
+  jpa:
+    show-sql: true        # JPA가 생성한 SQL을 출력
+    database: mysql       # 사용할 데이터베이스 설정
+    hibernate:
+      ddl-auto: create    # Hibernate DDL 자동 생성 설정
+      # create: 애플리케이션 시작 시 테이블을 새로 생성 (기존 테이블 삭제 후 생성)
+      # none: DDL 자동 생성 기능을 사용하지 않음
+      # update: 기존 테이블을 수정하여 변경 사항 반영
+      # create-drop: 애플리케이션 종료 시 테이블 삭제
+    properties:
+      hibernate:
+        format_sql: true  # SQL을 포맷된 형태로 출력
